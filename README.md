@@ -1,50 +1,89 @@
-# React + TypeScript + Vite
+# Pomodoro Clock ⏳
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **Pomodoro Timer App** built with **React** and **TypeScript**. This app helps boost your productivity using the Pomodoro technique: 25-minute work sessions followed by short breaks.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⏱️ Customizable timer with work sessions, short breaks, and long breaks. (coming soon).
+- 🔊 Sound notifications at the end of each session (using Howler.js). (coming soon).
+- 💾 Saves the state of completed sessions. (coming soon).
+- 🌙 Dark mode (coming soon).
+- 📱 Responsive design, mobile-friendly. (coming soon).
+- 🎨 Modern styling with **Tailwind CSS** and **Shadcn/UI**.
+- ⚛️ State management with **Jotai**.
+- 🔥 Smooth animations with **Framer Motion**.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn/UI](https://ui.shadcn.com/)
+- [Jotai](https://jotai.org/)
+- [Howler.js](https://howlerjs.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Lucide React](https://lucide.dev/)
 
-- Configure the top-level `parserOptions` property like this:
+## 📥 Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/bubbosvilup/Pomodoro-Clock.git
+   cd Pomodoro-Clock
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and go to [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🔧 Customization
+
+You can adjust the default timer durations by modifying the values in:
+
+```
+src/atoms/timerAtoms.ts
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- `workDurationAtom`: Duration of the work session (in seconds).
+- `shortBreakDurationAtom`: Duration of the short break.
+- `longBreakDurationAtom`: Duration of the long break.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+---
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 🤝 Contributing
+
+Contributions are welcome! ✨  
+To contribute:
+
+1. Fork the project.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Create a Pull Request.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 🙌 Acknowledgements
+
+- Inspired by the **[Pomodoro Technique](https://francescocirillo.com/pages/pomodoro-technique)**.
+- Thanks to all the open-source libraries used!
